@@ -9,6 +9,8 @@ Vue.mixin(Dates);
 
 // import global components
 import BaseApp from 'JS/BaseApp.vue';
+import HamburgerMenu from 'GeneralComponents/HamburgerMenu.vue';
+import NavDropdown from 'GeneralComponents/NavDropdown.vue';
 
 // Use Vue-Modal
 import VModal from 'vue-js-modal';
@@ -32,10 +34,7 @@ Vue.filter('ucase', function (value) {
     return value ? value.toUpperCase() : '';
 });
 
-const files = require.context('./', true, /\.vue$/i);
-files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
-
 new Vue({
-    el: '#base-app',
-    components: { BaseApp },
+    el: 'base-app',
+    components: { BaseApp, HamburgerMenu, NavDropdown },
 });
