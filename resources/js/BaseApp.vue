@@ -1,22 +1,16 @@
 <template>
     <div class="min-h-screen flex flex-col">
         <vue-snotify class="w-full"></vue-snotify>
-        <div class="flex flex-col w-full">
-            <top-nav></top-nav>
-        </div>
-        <div class="flex flex-col md:flex-row w-full">
-            <main-content></main-content>
-        </div>
+        <slot></slot>
         <app-modal></app-modal>
     </div>
 </template>
 
 <script>
-    import MainContent from 'Components/MainContent.vue';
     import AppModal from 'GeneralComponents/AppModal.vue';
 
     export default {
-        components: { MainContent, AppModal },
+        components: { AppModal },
         created () {
             this.setupListeners();
         },

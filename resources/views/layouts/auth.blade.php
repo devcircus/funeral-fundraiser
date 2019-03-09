@@ -16,10 +16,7 @@
 
 <body class="font-lato">
     <base-app>
-        @include('layouts.partials.nav')
-        <div class="container mx-auto">
-            @yield('content')
-        </div>
+        @yield('content')
     </base-app>
 
     <!-- Scripts -->

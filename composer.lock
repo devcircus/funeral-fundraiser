@@ -4,8 +4,409 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4731429c7f25ab92eaa813447a972209",
+    "content-hash": "101fbef8655fa41a5c3b52e296075b65",
     "packages": [
+        {
+            "name": "bright-components/actions",
+            "version": "1.0.0-beta.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bright-components/actions.git",
+                "reference": "ac6c1134db4bfce9434bdc365b0132865cd0a37e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bright-components/actions/zipball/ac6c1134db4bfce9434bdc365b0132865cd0a37e",
+                "reference": "ac6c1134db4bfce9434bdc365b0132865cd0a37e",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.7.* || 5.8.*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrightComponents\\Actions\\ActionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrightComponents\\Actions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clayton Stone",
+                    "email": "clay@phpstage.com",
+                    "homepage": "https://codestage.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Invokable actions. Not controllers.",
+            "homepage": "https://github.com/bright-components/actions",
+            "keywords": [
+                "actions",
+                "adr",
+                "bright-components",
+                "laravel"
+            ],
+            "time": "2019-02-28T23:21:38+00:00"
+        },
+        {
+            "name": "bright-components/adr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bright-components/adr.git",
+                "reference": "144e8f891c74a8cce3f9227537dfdfa7e236b08d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bright-components/adr/zipball/144e8f891c74a8cce3f9227537dfdfa7e236b08d",
+                "reference": "144e8f891c74a8cce3f9227537dfdfa7e236b08d",
+                "shasum": ""
+            },
+            "require": {
+                "bright-components/actions": "1.0.*@dev",
+                "bright-components/responders": "1.0.*@dev",
+                "bright-components/services": "1.0.*@dev",
+                "bright-components/valid": "1.0.*@dev",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrightComponents\\Adr\\AdrServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrightComponents\\Adr\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clayton Stone",
+                    "email": "clay@phpstage.com",
+                    "homepage": "https://codestage.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A collection of BrightComponents packages for ADR organization of your Laravel app.",
+            "homepage": "https://github.com/bright-components/adr",
+            "keywords": [
+                "action",
+                "adr",
+                "bright-components",
+                "laravel",
+                "responder",
+                "services"
+            ],
+            "time": "2018-09-05T22:04:32+00:00"
+        },
+        {
+            "name": "bright-components/common",
+            "version": "1.0.0-beta.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bright-components/common.git",
+                "reference": "272ffa108449f6543a6df3b440baefe6271cd3b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bright-components/common/zipball/272ffa108449f6543a6df3b440baefe6271cd3b1",
+                "reference": "272ffa108449f6543a6df3b440baefe6271cd3b1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.7.* || 5.8.*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrightComponents\\Common\\BrightComponentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrightComponents\\Common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clayton Stone",
+                    "email": "clay@phpstage.com",
+                    "homepage": "https://codestage.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Common components for BrightComponents packages.",
+            "homepage": "https://github.com/bright-components/common",
+            "keywords": [
+                "bright-components",
+                "common",
+                "contracts"
+            ],
+            "time": "2019-02-28T23:28:24+00:00"
+        },
+        {
+            "name": "bright-components/responders",
+            "version": "1.0.0-beta.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bright-components/responders.git",
+                "reference": "b254191c16fa006bd3d692651b953cbecd3962b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bright-components/responders/zipball/b254191c16fa006bd3d692651b953cbecd3962b8",
+                "reference": "b254191c16fa006bd3d692651b953cbecd3962b8",
+                "shasum": ""
+            },
+            "require": {
+                "devmarketer/laraflash": "1.3.*",
+                "laravel/framework": "5.7.* || 5.8.*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "~3.7",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrightComponents\\Responder\\ResponderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrightComponents\\Responder\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clayton Stone",
+                    "email": "clay@phpstage.com",
+                    "homepage": "https://codestage.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Responder Implementation for Laravel Projects",
+            "homepage": "https://github.com/bright-components/responders",
+            "keywords": [
+                "bright-components",
+                "responders"
+            ],
+            "time": "2019-02-28T23:00:06+00:00"
+        },
+        {
+            "name": "bright-components/services",
+            "version": "1.0.0-beta.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bright-components/services.git",
+                "reference": "60700d7453a1df0f839c05a40daacc5ae517da57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bright-components/services/zipball/60700d7453a1df0f839c05a40daacc5ae517da57",
+                "reference": "60700d7453a1df0f839c05a40daacc5ae517da57",
+                "shasum": ""
+            },
+            "require": {
+                "bright-components/common": "1.0.*@dev",
+                "laravel/framework": "5.7.* || 5.8.*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "~3.7",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrightComponents\\Services\\ServicesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrightComponents\\Services\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clayton Stone",
+                    "email": "clay@phpstage.com",
+                    "homepage": "https://codestage.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Service Implementation for Laravel Projects",
+            "homepage": "https://github.com/bright-components/services",
+            "keywords": [
+                "bright-components",
+                "servicehandler"
+            ],
+            "time": "2019-02-28T23:29:37+00:00"
+        },
+        {
+            "name": "bright-components/valid",
+            "version": "1.0.0-beta.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bright-components/valid.git",
+                "reference": "77479a99deba9b2b2304d1c8d1ba4f821b0219cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bright-components/valid/zipball/77479a99deba9b2b2304d1c8d1ba4f821b0219cf",
+                "reference": "77479a99deba9b2b2304d1c8d1ba4f821b0219cf",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.7.* || 5.8.*",
+                "php": "^7.1.3",
+                "waavi/sanitizer": "^1.0.10"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "~3.7",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BrightComponents\\Valid\\ValidServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BrightComponents\\Valid\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clayton Stone",
+                    "email": "clay@phpstage.com",
+                    "homepage": "https://codestage.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Custom Form Requests and Service Validation for Laravel",
+            "homepage": "https://github.com/bright-components/valid",
+            "keywords": [
+                "FormRequests",
+                "brightcomponents",
+                "request",
+                "rules",
+                "validation"
+            ],
+            "time": "2019-02-28T23:11:50+00:00"
+        },
+        {
+            "name": "devmarketer/laraflash",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DevMarketer/LaraFlash.git",
+                "reference": "9dad87b942b75b7bbda8c397cf4af5e14e6291a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DevMarketer/LaraFlash/zipball/9dad87b942b75b7bbda8c397cf4af5e14e6291a9",
+                "reference": "9dad87b942b75b7bbda8c397cf4af5e14e6291a9",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DevMarketer\\LaraFlash\\LaraFlashServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaraFlash": "DevMarketer\\LaraFlash\\LaraFlashFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "DevMarketer\\LaraFlash": "src/"
+                },
+                "files": [
+                    "src/DevMarketer/LaraFlash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "J. Alexander Curtis",
+                    "email": "jalexandercurtis@gmail.com"
+                }
+            ],
+            "description": "A powerful and flexible flash notifications system. Improving over built-in Laravel Flash messaging functionality.",
+            "homepage": "https://github.com/DevMarketer/LaraFlash",
+            "keywords": [
+                "flash",
+                "laraflash",
+                "laravel",
+                "messages",
+                "notifications",
+                "session"
+            ],
+            "time": "2017-11-14T23:05:12+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -1092,6 +1493,56 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2016-06-16T16:22:20+00:00"
         },
         {
             "name": "psr/container",
@@ -2502,6 +2953,66 @@
                 "environment"
             ],
             "time": "2019-03-06T09:39:45+00:00"
+        },
+        {
+            "name": "waavi/sanitizer",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Waavi/Sanitizer.git",
+                "reference": "d978b8f90de7a6ea40714b17fac0b1f59498f64f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Waavi/Sanitizer/zipball/d978b8f90de7a6ea40714b17fac0b1f59498f64f",
+                "reference": "d978b8f90de7a6ea40714b17fac0b1f59498f64f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.3",
+                "illuminate/validation": "~5.3",
+                "nesbot/carbon": "~1.0|~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0|~7.0|~8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Waavi\\Sanitizer\\Laravel\\SanitizerServiceProvider"
+                    ],
+                    "aliases": {
+                        "Sanitizer": "Waavi\\Sanitizer\\Laravel\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Waavi\\Sanitizer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Wallace San Paulo",
+                    "email": "info@waavi.com"
+                }
+            ],
+            "description": "Data sanitizer and Laravel 5 form requests with input sanitation.",
+            "keywords": [
+                "input",
+                "input filter",
+                "input sanitation",
+                "input sanitizer",
+                "laravel",
+                "sanitation",
+                "transform input"
+            ],
+            "time": "2019-02-19T13:49:49+00:00"
         }
     ],
     "packages-dev": [
@@ -4269,7 +4780,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "bright-components/adr": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
