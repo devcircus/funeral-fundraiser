@@ -1,33 +1,35 @@
 <template>
-    <li v-if="authenticated" class="flex-2 relative text-center h-8 cursor-pointer">
-        <a href="#" class="menu-link" @click="toggleLoginDropdown()">
-            <span class="mr-1 inline-block">{{ user.name }}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4">
-                <path class="secondary" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"></path>
-                <path class="secondary" d="M21 20v-1a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v1c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2z"></path>
-            </svg>
-        </a>
-        <ul v-if="showLoginDropdown" class="block absolute list-reset text-left w-48 border border-grey bg-grey-lightest shadow-md z-50 t-48-l-10">
-            <li href="#" class="dropdown-menu-item">
-                <a id="lg-logout" href="#" @click.prevent="doLogout()" class="text-green-light font-normal uppercase block">
-                    <span class="mr-1 inline-block">Logout</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4">
-                        <path class="primary" d="M11 4h3a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V6h-2v12h2v-2a1 1 0 0 1 2 0v3a1 1 0 0 1-1 1h-3v1a1 1 0 0 1-1.27.96l-6.98-2A1 1 0 0 1 2 19V5a1 1 0 0 1 .75-.97l6.98-2A1 1 0 0 1 11 3v1z"></path>
-                        <path class="primary" d="M18.59 11l-1.3-1.3c-.94-.94.47-2.35 1.42-1.4l3 3a1 1 0 0 1 0 1.4l-3 3c-.95.95-2.36-.46-1.42-1.4l1.3-1.3H14a1 1 0 0 1 0-2h4.59z"></path>
-                    </svg>
-                </a>
-            </li>
-            <li href="#" class="dropdown-menu-item">
-                <a id="lg-profile" href="/admiin" class="text-green-light font-normal uppercase block">
-                    <span class="mr-1 inline-block">Admin</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4">
-                        <path class="primary" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"></path>
-                        <path class="primary" d="M21 20v-1a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v1c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2z"></path>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-    </li>
+    <ul v-if="authenticated" class="list-reset flex flex-col">
+        <li class="flex-2 relative text-center h-8 cursor-pointer">
+            <a href="#" class="menu-link" @click="toggleLoginDropdown()">
+                <span class="mr-1 inline-block">{{ user.name }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4">
+                    <path class="secondary" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"></path>
+                    <path class="secondary" d="M21 20v-1a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v1c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2z"></path>
+                </svg>
+            </a>
+            <ul v-if="showLoginDropdown" class="block absolute list-reset text-left w-48 border border-grey bg-grey-lightest shadow-md z-50 t-48-l-10">
+                <li href="#" class="dropdown-menu-item">
+                    <a id="lg-logout" href="#" @click.prevent="doLogout()" class="text-green-light font-normal uppercase block dropdown-link">
+                        <span class="mr-1 inline-block">Logout</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4">
+                            <path class="primary" d="M11 4h3a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V6h-2v12h2v-2a1 1 0 0 1 2 0v3a1 1 0 0 1-1 1h-3v1a1 1 0 0 1-1.27.96l-6.98-2A1 1 0 0 1 2 19V5a1 1 0 0 1 .75-.97l6.98-2A1 1 0 0 1 11 3v1z"></path>
+                            <path class="primary" d="M18.59 11l-1.3-1.3c-.94-.94.47-2.35 1.42-1.4l3 3a1 1 0 0 1 0 1.4l-3 3c-.95.95-2.36-.46-1.42-1.4l1.3-1.3H14a1 1 0 0 1 0-2h4.59z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li href="#" class="dropdown-menu-item">
+                    <a id="lg-profile" href="/admin" class="text-green-light font-normal uppercase block dropdown-link">
+                        <span class="mr-1 inline-block">Admin</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4">
+                            <path class="primary" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"></path>
+                            <path class="primary" d="M21 20v-1a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v1c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
     <div v-else class="flex-1 text-center h-8 cursor-pointer">
         <a href="/login" class="w-full text-white font-lato font-semibold uppercase align-middle block no-underline p-4 whitespace-no-wrap tracking-wide hover:text-green-light menu-link">
             <span class="mr-1 inline-block">Login</span>
@@ -40,9 +42,19 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         props: ['authenticated', 'user'],
+        data () {
+            return {
+                showLoginDropdown: false,
+            }
+        },
         methods: {
+            toggleLoginDropdown () {
+                this.showLoginDropdown = ! this.showLoginDropdown;
+            },
             doLogout () {
                 axios.post('/logout').then( () => {
                     this.redirectTo('/login');
@@ -59,6 +71,18 @@
     .t-48-l-10 {
         top: 48px;
         left: 10%;
+    }
+    .menu-link {
+        @apply .w-full .text-white .font-lato .font-semibold .uppercase .align-middle .block .no-underline .p-4 .whitespace-no-wrap .tracking-wide;
+        &:hover {
+            @apply .text-green-lighter;
+            .menu-link-icon path {
+                fill: #51d88a;
+            }
+            .menu-link-icon path.hover-white {
+                fill: #F8FAFC;
+            }
+        }
     }
     .dropdown-menu-item {
         @apply .h-12 .p-2 .cursor-pointer .border-b .border-grey-light;
