@@ -27,7 +27,7 @@ mix.sass('resources/sass/main.scss', 'public/css')
             GeneralComponents: path.resolve(__dirname, 'resources/js/components/general'),
             Events: path.resolve(__dirname, 'resources/js/events'),
             Mixins: path.resolve(__dirname, 'resources/js/mixins'),
-            Models: path.resolve(__dirname, 'resources/js/store/models'),
+            Models: path.resolve(__dirname, 'resources/js/models'),
          }
       },
       devtool: 'inline-source-map',
