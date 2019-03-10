@@ -9,6 +9,7 @@ Vue.mixin(Dates);
 
 // import global components
 import BaseApp from 'JS/BaseApp.vue';
+import StripeComponent from 'Components/StripeComponent.vue';
 import HamburgerMenu from 'GeneralComponents/HamburgerMenu.vue';
 import NavDropdown from 'GeneralComponents/NavDropdown.vue';
 
@@ -36,5 +37,5 @@ Vue.filter('ucase', function (value) {
 
 new Vue({
     el: 'base-app',
-    components: { BaseApp, HamburgerMenu, NavDropdown },
+    components: { BaseApp, HamburgerMenu, NavDropdown, StripeComponent },
 });
