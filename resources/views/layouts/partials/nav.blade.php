@@ -8,7 +8,16 @@
         </div>
         <hamburger-menu :authenticated="{{ json_encode(Auth::check()) }}"></hamburger-menu>
         <nav class="hidden pl-12 lg:flex lg:flex-1 lg:w-full lg:justify-end" role="navigation">
-            <ul class="list-reset">
+            <ul class="list-reset flex justify-between">
+                <li class="flex-1 text-center h-8 cursor-pointer">
+                    <a href="/donations/new" class="w-full text-white font-lato font-semibold uppercase align-middle block no-underline p-4 whitespace-no-wrap tracking-wide hover:text-green-light menu-link">
+                        <span class="mr-1 inline-block">Donate</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-middle inline-block -mt-1 h-4 menu-link-icon">
+                            <circle cx="12" cy="12" r="10" class="secondary"></circle>
+                            <path class="primary hover-white" d="M12.88 8.88a3 3 0 1 1 4.24 4.24l-4.41 4.42a1 1 0 0 1-1.42 0l-4.41-4.42a3 3 0 1 1 4.24-4.24l.88.88.88-.88z"></path>
+                        </svg>
+                    </a>
+                </li>
                 <li class="flex-1 text-center h-8 cursor-pointer">
                     <a href="/about" class="w-full text-white font-lato font-semibold uppercase align-middle block no-underline p-4 whitespace-no-wrap tracking-wide hover:text-green-light menu-link">
                         <span class="mr-1 inline-block">About</span>

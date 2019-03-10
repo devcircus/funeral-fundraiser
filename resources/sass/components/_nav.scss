@@ -2,10 +2,10 @@
     &:hover {
         @apply .text-green-lighter;
 
-        .menu-link-icon path {
+        .menu-link-icon path, .menu-link-icon circle {
             fill: #4CD88A;
         }
-        .menu-link-icon path.hover-white {
+        .menu-link-icon path.hover-white, .menu-link-icon circle.hover-white {
             fill: #F8FAFC;
         }
     }
