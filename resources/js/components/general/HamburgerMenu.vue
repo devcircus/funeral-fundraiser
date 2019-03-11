@@ -12,6 +12,11 @@
                     <span class="inline-block">About</span>
                 </a>
             </li>
+            <li class="text-center h-8 cursor-pointer text-left h-16 leading-loose border-b border-grey-light hover:bg-green-light mobile-menu-item">
+                <a href="/donations/new" class="w-full text-green-light font-lato font-normal uppercase align-middle block no-underline p-4 mobile-menu-link">
+                    <span class="inline-block">Donate</span>
+                </a>
+            </li>
             <div v-if="authenticated">
                 <li class="text-center h-8 cursor-pointer text-left h-16 leading-loose border-b border-grey-light hover:bg-green-light mobile-menu-item">
                     <a id="sm-profile" href="/admin" class="w-full text-green-light font-lato font-normal uppercase align-middle block no-underline p-4 mobile-menu-link">
