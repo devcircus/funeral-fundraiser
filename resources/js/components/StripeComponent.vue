@@ -14,7 +14,7 @@
             <!-- <input v-model="amount" name="amount" class="field" placeholder="eg. $25.00" /> -->
         </label>
         <label>
-            <span>Card</span>
+            <span class="hidden md:inline">Card</span>
             <div ref="card" id="card-element" class="field"></div>
         </label>
         <button type="submit">Donate</button>
