@@ -17,7 +17,8 @@
             <span class="hidden md:inline">Card</span>
             <div ref="card" id="card-element" class="field"></div>
         </label>
-        <button type="submit">Donate</button>
+        <button v-if="ready" type="submit">Donate</button>
+        <svg v-else class="w-8 inline-block align-middle" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve"><path d="M0 128V83h17.25v27.75h93.5V83H128v45H0z" fill="#38c171" fill-opacity="1"/><g><path d="M80.92 210.95v-51.27h18.15L64 113.18l-35.07 46.5h18.15v51.27h33.84z" fill="#38c171" fill-opacity="1"/><animateTransform attributeName="transform" type="translate" from="0 0" to="0 -220" dur="1800ms" repeatCount="indefinite"/></g></svg>
         <div class="outcome">
             <div v-if="error" class="error">{{ errorMessage }}</div>
             <div v-if="success" class="success">
@@ -72,6 +73,7 @@
                     precision: 2,
                     masked: false
                 },
+                ready: true,
             }
         },
         created () {
@@ -91,18 +93,21 @@
         },
         methods: {
             donate () {
+                this.ready = false;
                 this.error = false;
                 this.success = false;
                 this.errorMessage = '';
                 if (this.amount < 5) {
                     this.error = true;
                     this.errorMessage = 'Amount must be at least $5.00';
+                    this.ready = true;
 
                     return;
                 }
                 if (this.phone === null) {
                     this.error = true;
                     this.errorMessage = 'Please provide a phone number.';
+                    this.ready = true;
 
                     return;
                 }
@@ -115,13 +120,16 @@
                 if (result.token) {
                     this.token = result.token.id;
                     Donation.store({ name: this.extraDetails.name, phone: this.phone, amount: this.amount, token: result.token['id'] }).then( response => {
+                        this.ready = true;
                         this.resetForm();
                         this.$dispatch('notification', response.success);
                     }).catch( error => {
+                        this.ready = true;
                         this.resetForm();
                         this.$dispatch('error', error.data.error);
                     });
                 } else if (result.error) {
+                    this.ready = true;
                     this.error = true;
                     this.errorMessage = result.error.message;
                 }
