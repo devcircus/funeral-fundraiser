@@ -7,13 +7,13 @@
     </div>
     <div class="flex justify-between items-center text-left px-8 py-1 mb-2">
         <span class="flex-1 font-semibold text-base text-blue hover:text-blue-light">Name</span>
-        <span class="flex-1 font-semibold text-base text-blue hover:text-blue-light">Phone</span>
+        <span class="flex-1 hidden md:block font-semibold text-base text-blue hover:text-blue-light">Phone</span>
         <span class="flex-1 font-semibold text-base text-blue hover:text-blue-light">Amount</span>
     </div>
     @forelse($donations as $donation)
         <div class="flex justify-between items-center text-left px-8 py-1 mb-2">
             <span class="flex-1 font-normal text-base text-blue hover:text-blue-light">{{ $donation['name'] }}</span>
-            <span class="flex-1 font-normal text-base text-blue hover:text-blue-light">{{ $donation['phone'] }}</span>
+            <span class="flex-1 hidden md:block font-normal text-base text-blue hover:text-blue-light">{{ $donation['phone'] }}</span>
             <span class="flex-1 font-normal text-base text-blue hover:text-blue-light">{{ $donation['amount'] }}</span>
         </div>
     @empty
